@@ -6,9 +6,10 @@ public class ForestOne extends Forest {
 	
 	public static void main(String[] args) {
 		
-		//for static variables
+		//for static variables to protected
 		ForestOne.getSomeFressAir();
 		
+		//for public
 		ForestOne.getForestName("Bannerghatta");
 		
 		//for non static variables

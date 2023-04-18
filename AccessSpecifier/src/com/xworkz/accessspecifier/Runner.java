@@ -15,6 +15,7 @@ public class Runner {
 		
 		//calling protected method
 		Forest.getSomeFressAir();
+		System.out.println(Forest.bioDiversity);
 		
 		//for Non Static Variable
 		Forest obj = new Forest();
