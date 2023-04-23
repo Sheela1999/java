@@ -5,16 +5,14 @@ public class Family {
 	public int familyMembers;
 	public String familyMemName;
 	public String familyType;
-	public boolean isFamilyImportantForEveryOne;
 	public char firstLetterOfFamily;
 	public long familyExpenditure;
 	public float familyLovePercent;
 	
-	public Family(int familyMembers, String familyMemName, String familyType, boolean isFamilyImportantForEveryOne, char firstLetterOfFamily, long familyExpenditure, float familyLovePercent) {
+	public Family(int familyMembers, String familyMemName, String familyType, char firstLetterOfFamily, long familyExpenditure, float familyLovePercent) {
 		this.familyMembers = familyMembers;
 		this.familyMemName = familyMemName;
 		this.familyType = familyType;
-		this.isFamilyImportantForEveryOne = isFamilyImportantForEveryOne;
 		this.firstLetterOfFamily = firstLetterOfFamily;
 		this.familyExpenditure = familyExpenditure;
 		this.familyLovePercent = familyLovePercent;
@@ -29,7 +27,7 @@ public class Family {
 	}
 	
 	public String toString() {
-		return "familyMembers: " +familyMembers  +" familyType: " +familyType  + " isFamilyImportantForEveryOne: " +isFamilyImportantForEveryOne  +" firstLetterOfFamily: " + firstLetterOfFamily   + " familyExpenditure: " +familyExpenditure  + " familyLovePercent: " +familyLovePercent;
+		return "familyMembers: " +familyMembers  +" familyType: " +familyType   +" firstLetterOfFamily: " + firstLetterOfFamily   + " familyExpenditure: " +familyExpenditure  + " familyLovePercent: " +familyLovePercent;
 	}
 	
 	public boolean equals(Family fam1) {
@@ -43,4 +41,5 @@ public class Family {
 		return false;
 		}
 	}
+	
 }
