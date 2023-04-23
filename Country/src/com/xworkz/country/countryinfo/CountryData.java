@@ -53,6 +53,8 @@ public class CountryData {
 	private String nationalVegetable;
 	private String nationalMotto;
 	private byte noOfUnionTerritories;
+	private String defenceMinister;
+	private String financeMinister;
 	public StatesName nameOfTheStates;
 	public GetNames nameOfUnionTerritories;
 	
@@ -442,6 +444,22 @@ public class CountryData {
 
 	public void setNoOfUnionTerritories(byte noOfUnionTerritories) {
 		this.noOfUnionTerritories = noOfUnionTerritories;
+	}
+	
+	public String getDefenceMinister() {
+		return defenceMinister;
+	}
+	
+	public void setDefenceMinister(String defenceMinister) {
+		this.defenceMinister = defenceMinister;
+	}
+	
+	public String getFinanceMinister() {
+		return financeMinister;
+	}
+
+	public void setFinanceMinister(String financeMinister) {
+		this.financeMinister = financeMinister;
 	}
 
 	public StatesName getNameOfTheStates() {

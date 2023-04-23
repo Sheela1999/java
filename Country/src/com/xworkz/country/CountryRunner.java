@@ -154,6 +154,12 @@ public class CountryRunner {
 		country.setNoOfUnionTerritories((byte) 8);
 		System.out.println(country.getNoOfUnionTerritories());
 		
+		country.setDefenceMinister("Rajnath Singh");
+		System.out.println(country.getDefenceMinister());
+		
+		country.setFinanceMinister("Nirmala Sitharaman");
+		System.out.println(country.getFinanceMinister());
+		
 		country.setNameOfTheStates(StatesName.Karnataka);
 		System.out.println(country.getNameOfTheStates());
 
