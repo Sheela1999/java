@@ -8,14 +8,16 @@ public class Family {
 	public char firstLetterOfFamily;
 	public long familyExpenditure;
 	public float familyLovePercent;
+	public short monthlyIncomeOfFamily;
 	
-	public Family(int familyMembers, String familyMemName, String familyType, char firstLetterOfFamily, long familyExpenditure, float familyLovePercent) {
+	public Family(int familyMembers, String familyMemName, String familyType, char firstLetterOfFamily, long familyExpenditure, float familyLovePercent, short monthlyIncomeOfFamily) {
 		this.familyMembers = familyMembers;
 		this.familyMemName = familyMemName;
 		this.familyType = familyType;
 		this.firstLetterOfFamily = firstLetterOfFamily;
 		this.familyExpenditure = familyExpenditure;
 		this.familyLovePercent = familyLovePercent;
+		this.monthlyIncomeOfFamily = monthlyIncomeOfFamily;
 		
 		//System.out.println(this.familyMembers);
 		//System.out.println(this.familyMemName);
@@ -27,7 +29,9 @@ public class Family {
 	}
 	
 	public String toString() {
-		return "familyMembers: " +familyMembers  +" familyType: " +familyType   +" firstLetterOfFamily: " + firstLetterOfFamily   + " familyExpenditure: " +familyExpenditure  + " familyLovePercent: " +familyLovePercent;
+		return "familyMembers: " +familyMembers  +" familyType: " +familyType   +" firstLetterOfFamily: " + firstLetterOfFamily  
+				+ " familyExpenditure: " +familyExpenditure  + " familyLovePercent: " +familyLovePercent 
+				+ " monthlyIncomeOfFamily = " + monthlyIncomeOfFamily;
 	}
 	
 	public boolean equals(Family fam1) {
