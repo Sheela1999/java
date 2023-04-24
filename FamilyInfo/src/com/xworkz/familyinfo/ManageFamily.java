@@ -23,7 +23,7 @@ public static void main(String[] args) {
 		
 		//equals method
 		
-		System.out.println(family.equals(fam1));
+		System.out.println(family.equals(fam1)); 
 	}
 
 }
