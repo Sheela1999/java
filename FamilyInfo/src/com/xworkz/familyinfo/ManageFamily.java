@@ -18,7 +18,7 @@ public static void main(String[] args) {
 		Family fam3 = new Family(9, "nayana", "Nuclear family", 'n', 200000, 100.0f, (short) 31000);
 		System.out.println(fam3);
 		
-		Family fam4 = new Family(3, "manya", "Single-Parent family", 'm', 25000, 99.99f, (short) 32767);
+		Family fam4 = new Family(3, "manya", "Single-Parent family", 'm', 25000, 99.99f, (short) 32760);
 		System.out.println(fam4);
 		
 		//equals method
