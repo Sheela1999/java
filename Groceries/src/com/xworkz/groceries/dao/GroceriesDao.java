@@ -134,5 +134,38 @@ public class GroceriesDao {
 			return false;
 		}
 	}
+	
+	public boolean search(String GroceryName) {
+		if (GroceryName != null) {
+			if (GroceryName.length() > 3) {
+				for (int i = 0; i < GroceriesName.length; i++) {
+					if (GroceriesName[i] != null) {
+						if (GroceriesName[i].equals(GroceryName)) {
+							System.out.println("Name is found");
+							return true;
+						}
 
+						{
+							System.out.println("Given name " + GroceryName + "  is not found");
+							return false;
+						}
+					}
+				}
+				{
+
+					return false;
+				}
+
+			}
+			{
+				System.out.println("givenGroceryName " + GroceryName + "length is not valid");
+				return false;
+			}
+
+		}
+		{
+			System.out.println("givenGrocery Name " + GroceryName + "is null");
+			return false;
+		}
+	}
 }

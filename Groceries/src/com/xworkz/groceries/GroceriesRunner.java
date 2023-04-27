@@ -42,7 +42,11 @@ public class GroceriesRunner {
 
 //Calling DeletedByName Method
 		obj2.DeleteByName("WF");
-
+		
+//calling search method
+		obj2.search("chacolate");
+		
+//calling read method
 		obj2.read();
 	}
 
