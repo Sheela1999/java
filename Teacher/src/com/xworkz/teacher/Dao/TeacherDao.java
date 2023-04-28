@@ -94,22 +94,19 @@ public class TeacherDao {
 
 	public boolean search(String teacherName) {
 		if(teacherName!= null) {
-			if(teacherName.length()> 3) {
+			if(teacherName.length()>3) {
+				System.out.println("The given name " + teacherName + " is  valid");
 				
-				for(int i=0; i<teacherNames.length; i++) {
+				for(int i=0; i<=teacherNames.length-1; i++) {
 					if(teacherNames[i]!=null) {
-						if(teacherNames[i].equals(teacherName)){
+						teacherNames[i].equals(teacherName);
 							System.out.println("Teacher name is found");
 							return true;
 						}
-						
-						{
-							System.out.println("given name " + teacherName + " is not found");
-							return false;
-						}
-					}
 				}
+				
 				return false;
+			
 			}
 			{
 				System.out.println("given name "+ teacherName + " length is not valid");

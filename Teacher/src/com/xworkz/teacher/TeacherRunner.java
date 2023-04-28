@@ -53,7 +53,8 @@ public class TeacherRunner {
 				
 	System.out.println("searching name-----------------------------------------------------");	
 		//search name
-		dao.search("Shilpa");
+		boolean result = dao.search("sheela");
+		System.out.println(result);
 		
 	System.out.println("____________________________________________________");
 		//delete by index
