@@ -101,7 +101,7 @@ public class ResumeDAO {
 
 					for (int i = 0; i < resume.length; i++) {
 						if (resume[i] != null) {
-							if (resume[i].getName().equals(degree)) {
+							if (resume[i].getName().equals(name)) {
 								resume[i].setDegree(degree);
 								System.out.println("Degree updated successfully");
 								return true;
@@ -126,44 +126,48 @@ public class ResumeDAO {
 		return false;
 	}
 
-	public boolean updatePhoneNumberByEmail(String email, long phoneNumber) {
-		if (email != null) {
-			if (phoneNumber != 0) {
+	public ResumeDTO updatePhoneNumberByEmail(String email, long phoneNumber) {
+		if (email != null && email.length() > 10) {
+			System.out.println("Email is valid");
+			if (phoneNumber >= 10) {
+				System.out.println("phone number is valid");
 
 				for (int i = 0; i < resume.length; i++) {
 					if (resume[i] != null) {
-						resume[i].getEmail().equals(email);
-						resume[i].setPhoneNumber(phoneNumber);
-						System.out.println("phone number is updated successfully");
-						return true;
+						if (resume[i].getEmail().equals(email)) {
+							resume[i].setPhoneNumber(phoneNumber);
+							System.out.println("phone number is updated successfully");
+							return resume[i];
+						}
+						System.out.println("phone number not updated");
+
 					}
-					System.out.println("phone number not updated");
+
 				}
 				System.out.println("email is not found");
-				return false;
+				return null;
 			}
 			System.out.println("updating phone number is 0");
-			return false;
+			return null;
 		}
 		System.out.println("updating email is null");
-		return false;
+		return null;
 	}
 
 	public boolean deleteByName(String dltName) {
 		if (dltName != null) {
 
 			for (int i = 0; i < resume.length; i++) {
-				if (dltName.equals(dltName)) {
-					dltName = null;
-
-					System.out.println("Deleted Successfully");
-					return true;
+				if (resume[i] != null) {
+					if (resume[i].getName().equals(dltName)) {
+						resume[i] = null;
+						System.out.println("Deleted Successfully");
+						return true;
+					}
 				}
-
 			}
 			System.out.println("name is not found");
 			return false;
-
 		}
 		System.out.println("deleted name is null");
 		return false;

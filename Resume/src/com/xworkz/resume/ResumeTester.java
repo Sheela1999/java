@@ -51,11 +51,11 @@ public class ResumeTester {
 
 		dao.updateDegreeByName("Shree H", "MBBS");
 		
-		dao.updatePhoneNumberByEmail("thanuarun@gmail.com", 7908654321l);
+		dao.updatePhoneNumberByEmail("sheelaxworkz@gamil.com", 7908654321l);
 		
 		System.out.println("-----------------------------------------------------");
 		
-		dao.deleteByName("Shyama k");
+		dao.deleteByName("Shyama K");
 		
 		System.out.println("------------------------------------------------------");
 		
