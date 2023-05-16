@@ -34,10 +34,16 @@ public class LaptopRunner extends LaptopDao {
 		
 		System.out.println("----------------------------------------------------------");
 		
+		//in the different package runner also we can access the protected and public
 		LaptopRunner dao = new LaptopRunner();
 		
 		dao.processor = "intel3";
 		System.out.println(dao.processor);
+		
+		System.out.println("-------------------------");
+		
+		data.setGenaration("i3");
+		System.out.println(data.getGenaration());
 
 	}
 
