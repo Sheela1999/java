@@ -1,6 +1,6 @@
 package com.xworkz.laptop;
 
-public class Apple extends LaptopData {
+public class Apple extends Laptop {
 	
 	public void playMusic() {
 		System.out.println("In Apple laptop we can Play Music");

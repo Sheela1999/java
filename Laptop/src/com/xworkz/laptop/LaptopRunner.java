@@ -37,7 +37,7 @@ public class LaptopRunner {
 	
         System.out.println("-------------------------------------");
         
-        LaptopData.playMovies();
+        Laptop.playMovies();
         
 	}
 

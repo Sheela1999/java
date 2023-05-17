@@ -1,6 +1,6 @@
 package com.xworkz.laptop;
 
-public abstract class Hp extends LaptopData {
+public abstract class Hp extends Laptop {
 	
 	public abstract void hasTouchpad();
 	

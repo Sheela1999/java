@@ -1,6 +1,6 @@
 package com.xworkz.laptop;
 
-public class Lenovo extends LaptopData {
+public class Lenovo extends Laptop {
 	
 	public void runsSmoothly() {
 		System.out.println("Lenovo has good usage");

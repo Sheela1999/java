@@ -1,6 +1,6 @@
 package com.xworkz.laptop;
 
-public abstract class LaptopData {
+public abstract class Laptop {
 	
 	//abstract methods
 	public abstract void storage();
