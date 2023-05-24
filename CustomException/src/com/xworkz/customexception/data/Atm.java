@@ -1,4 +1,10 @@
-package com.xworkz.customexception.custom;
+package com.xworkz.customexception.data;
+
+import com.xworkz.customexception.custom.BalanceNotFoundException;
+import com.xworkz.customexception.custom.InsufficientBalanceException;
+import com.xworkz.customexception.custom.InvalidLanguageException;
+import com.xworkz.customexception.custom.InvalidPinException;
+import com.xworkz.customexception.custom.InvalidUserPin;
 
 public class Atm {
 
@@ -8,6 +14,7 @@ public class Atm {
 
 			if (userPin == pin) {
 				System.out.println("userPin is valid");
+				return;
 			}
 			throw new InvalidUserPin("user pin not valid");
 			// System.out.println("user pin is not valid");
@@ -17,29 +24,34 @@ public class Atm {
 
 	}
 
-	public static void checkBalance(String language, int balance) throws InvalidLanguageException, BalanceNotFoundException {
-		if(language != null) {
+	public static boolean checkBalance(String language, int balance)
+			throws InvalidLanguageException, BalanceNotFoundException {
+		if (language != null) {
 			System.out.println("given language is valid");
-			
-			if(balance == 50000) {
+
+			if (balance == 50000) {
 				System.out.println("checking balance is found");
+				return true;
 			}
 			throw new InvalidLanguageException("language not valid");
 //			System.out.println("language  not valid");
+//			return false;
 
 		}
 		throw new BalanceNotFoundException("balance not found");
 //		System.out.println("balance not found");
+//		return false;
 
 	}
-	
+
 	public static void withdrawAmount(int amount, long balance) throws InsufficientBalanceException {
-		if(amount <= balance) {
+		if (amount <= balance) {
 			System.out.println("remove card");
 			System.out.println("wait for cash");
+			return;
+		} else {
+			throw new InsufficientBalanceException("Insufficient balance");
 		}
-		throw new InsufficientBalanceException("Insufficient balance");
-		//System.out.println("Insufficient balance");
 	}
 
 }
