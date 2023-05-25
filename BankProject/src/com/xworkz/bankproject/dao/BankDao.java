@@ -34,7 +34,7 @@ public class BankDao {
 		return banks;
 	}
 
-	public boolean find(String name) throws NoSpaceArrayException, NameNotFoundException {
+	public boolean find(String name) throws NameNotFoundException {
 		if (name != null && name.length() > 4) {
 			for (int i = 0; i < banks.length; i++) {
 				if (banks[i] != null) {
@@ -45,7 +45,8 @@ public class BankDao {
 					throw new NameNotFoundException("Searching name is not found");
 				}
 			}
-			throw new NoSpaceArrayException("Array is not having enough space");
+			System.out.println("Searching name is not matching");
+			return false;
 		}
 		System.out.println("name is null");
 		return false;
@@ -64,10 +65,9 @@ public class BankDao {
 						throw new NotUpadetedEcxeption("Branch is not updated");
 					}
 				}
-				System.out.println("Array is not having enough space");
 				return false;
 			}
-			System.out.println("type and brach is not valid for update");
+			System.out.println("type and brach length is not valid for update");
 			return false;
 		}
 		System.out.println("type and brachs are null");
