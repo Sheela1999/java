@@ -6,7 +6,7 @@ public class InterfaceRunner {
 		
 		System.out.println("------------Samsung---------------------");
 		
-		Smartphone sam = new Samsung(); 
+		Smartphone sam = new Samsung();//loose coupling 
 		sam.call();
 		sam.camera();
 		sam.accessingInternet();
@@ -23,7 +23,7 @@ public class InterfaceRunner {
 		
 		System.out.println("------------Vivo------------------------------");
 		
-		Vivo vivo = new Vivo();
+		Vivo vivo = new Vivo();//tight coupling
 		vivo.call();
 		vivo.message();
 		vivo.camera();

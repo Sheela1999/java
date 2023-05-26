@@ -1,6 +1,6 @@
 package com.xworkz.mobileproject;
 
-public class Vivo implements Mobile, Smartphone {
+public class Vivo implements Smartphone {
 	
 	public void call() {
 		System.out.println("calling from Vivo.......");

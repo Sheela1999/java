@@ -1,10 +1,6 @@
 package com.xworkz.mobileproject;
 
-public interface Smartphone {
-	
-	public void call();
-	
-	public void message();
+public interface Smartphone extends Mobile {
 	
 	public void camera();
 	
