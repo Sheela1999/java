@@ -32,13 +32,13 @@ public class FilmImpl implements FilmDao {
 	}
 
 	@Override
-	public FilmDto[] find(Integer noOfCoActors) throws NullPointerException  {
+	public FilmDto find(Integer noOfCoActors) throws NullPointerException  {
 		if(noOfCoActors <= 500) {
 			for(int i=0; i<dtos.length; i++) {
 				if(dtos[i] != null) {
 					if(dtos[i].getNoOfCoActors() .equals(noOfCoActors)) {
 						System.out.println("no of actors found");
-						return dtos;
+						return dtos[i];
 					}
 				}
 			}
@@ -89,9 +89,55 @@ public class FilmImpl implements FilmDao {
 		}
 		throw new DeleteValueNotFoundException("Deletting value is null");
 	}
+	
+	@Override
+	public FilmDto findByTwoFields(String actressName, Long budget) throws NullPointerException {
+		if(actressName != null && budget >= 500000000l) {
+			if(actressName.length()>3) {
+				for(int i=0; i<dtos.length; i++) {
+					if(dtos[i] != null) {
+						if(dtos[i].getActressName().equals(actressName)) {
+							if(dtos[i].getBudget().equals(budget)) {
+								System.out.println("two fiels are found");
+								return dtos[i];
+							}
+						}
+					}
+				}
+				return null;
+			}
+		}
+		throw new NullPointerException("given value is null");
+	}
+
+	@Override
+	public boolean updateByTwoFields(String actorName, Integer noOfCoActors, String filmName) throws UpdateValueIsNull {
+		if(filmName != null && actorName != null) {
+			if(noOfCoActors >= 100) {
+				for(int i=0; i<dtos.length; i++) {
+					if(dtos[i] != null) {
+						if(dtos[i].getActorName().equals(actorName)) {
+							if(dtos[i].getNoOfCoActors().equals(noOfCoActors)) {
+								dtos[i].setFilmName(filmName);
+								System.out.println("Name is updated");
+								return true;
+							}
+							System.out.println("no of co actors not found");
+						}
+						System.out.println("name not found");
+					}
+					System.out.println("index value is null");
+				}
+				return false;
+			}
+			return false;
+		}
+		throw new UpdateValueIsNull("updating value is null");
+	}
 
 	@Override
 	public FilmDto[] readAll() {
 		return dtos;
 	}
+
 }
