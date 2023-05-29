@@ -117,12 +117,12 @@ public class FilmImpl implements FilmDao {
 				for(int i=0; i<dtos.length; i++) {
 					if(dtos[i] != null) {
 						if(dtos[i].getActorName().equals(actorName)) {
-							if(dtos[i].getNoOfCoActors().equals(noOfCoActors)) {
+							//if(dtos[i].getNoOfCoActors().equals(noOfCoActors)) {
 								dtos[i].setFilmName(filmName);
 								System.out.println("Name is updated");
 								return true;
-							}
-							System.out.println("no of co actors not found");
+							//}
+							//System.out.println("no of co actors not found");
 						}
 						System.out.println("name not found");
 					}

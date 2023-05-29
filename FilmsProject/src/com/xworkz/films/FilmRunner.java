@@ -32,7 +32,7 @@ public class FilmRunner {
 			
 			System.out.println("-----------------UPDATE------------------------------------");
 			dao.update(400000000l, "Aparna Das");
-			dao.updateByTwoFields("Aparna", 300, "dada 1");
+			dao.updateByTwoFields("Rishabh Shetty", 300, "Kantara 2");
 			
 			System.out.println("-----------------DELETE------------------------------------");
 			dao.delete("Dulquer Salmaan");
