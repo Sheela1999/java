@@ -72,10 +72,11 @@ public class CollectionsRunner {
 		
 		//using toArray
 		System.out.println("------------------ToArray-------------------");
-		Object[] arr = list.toArray();
-		System.out.println("Elements of ArrayList"+ " as Array: "+ list.toString());
-		System.out.println(list.toArray(arr));
-		
+		String[] str = new String[list.size()];
+		list.toArray();
+		for(String s:list) {
+			System.out.println(s);
+		}
 		System.out.println("------------ToString--------------------------------------------------------");
 		System.out.println(list.toString());
 		
